@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $descrizione = 'lorem lorem lorem lorem lorem';
+    return view('home', compact('descrizione'));
+});
+
+Route::get('/other', function () {
+    $titolo = 'questo è il titolo della nuova pagina';
+    $descrizione = 'lorem lorem lorem lorem lorem';
+    return view('other', compact('titolo', 'descrizione'));
 });
